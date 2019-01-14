@@ -10,16 +10,14 @@
  |
  |  Theme #3 by raiidens (@ tumblr)
  |  Published August 2015
- |	Updated October 2016
- |  Ver. 1.04
+ |	Updated September 2017
+ |  Ver. 1.05
  |
  |  Edit as much as you like, but please do not
  |  claim as your own work, and leave credit somewhere.
  |
  -->
 
-<meta name="if:Infinite scrolling" content="0">
-<meta name="if:Show pagination buttons" content="1">
 <meta name="if:Show captions" content="1">
 <meta name="if:Black and white images" content="1">
 <meta name="if:Color images on hover" content="1">
@@ -27,6 +25,7 @@
 <meta name="if:Disable description box" content="0">
 <meta name="if:Always show description box" content="0">
 <meta name="if:Always show links" content="0">
+<meta name="if:Always show post notes" content="0">
 <meta name="if:Disable header stars" content="0">
 <meta name="if:Disable body stars" content="0">
 
@@ -314,6 +313,11 @@ blockquote img {
     -webkit-transition: all 0.7s ease-in-out;
     -moz-transition: all 0.7s ease-in-out;
     -o-transition: all 0.7s ease-in-out;
+    
+    {block:IfAlwaysShowPostNotes}
+    left:540px;
+    opacity:1;
+    {/block:IfAlwaysShowPostNotes}
 }
 .post:hover .infobox {
     left:540px;
@@ -658,14 +662,12 @@ ol.notes li.note{
 </style>
 </head>
 <body>
-{block:IfShowPaginationButtons}
 <div id="nextpageun">▶</div>
 <div id="prevpageun">◀</div>
 {block:Pagination}
 {block:PreviousPage}<a href="{PreviousPage}"><div id="prevpage">◀</div></a>{/block:PreviousPage}
 {block:NextPage}<a href="{NextPage}"><div id="nextpage">▶</div></a>{/block:NextPage}
 {/block:Pagination}
-{/block:IfShowPaginationButtons}
 <div id="header">
     <canvas id="stars"></canvas>
     <div id="headerpic"></div>
