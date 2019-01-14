@@ -10,7 +10,8 @@
  |
  |  Theme #3 by raiidens (@ tumblr)
  |  Published August 2015
- |  Ver. 1.01
+ |	Updated October 2015
+ |  Ver. 1.02
  |
  |  Edit as much as you like, but please do not
  |  claim as your own work, and leave credit somewhere.
@@ -207,7 +208,12 @@ blockquote {
     text-align:justify;
 }
 blockquote p {display:block!important;}
-blockquote img {max-width:220px!important;}
+blockquote img {
+	display:block;
+	max-width:450px;
+	width:auto;
+	height:auto;
+}
 
 #posts {float:left;}
 
@@ -652,11 +658,11 @@ ol.notes li.note{
 </head>
 <body>
 {block:IfShowPaginationButtons}
-<div id="nextpageun">?</div>
-<div id="prevpageun">?</div>
+<div id="nextpageun">▶</div>
+<div id="prevpageun">◀</div>
 {block:Pagination}
-{block:PreviousPage}<a href="{PreviousPage}"><div id="prevpage">?</div></a>{/block:PreviousPage}
-{block:NextPage}<a href="{NextPage}"><div id="nextpage">?</div></a>{/block:NextPage}
+{block:PreviousPage}<a href="{PreviousPage}"><div id="prevpage">◀</div></a>{/block:PreviousPage}
+{block:NextPage}<a href="{NextPage}"><div id="nextpage">▶</div></a>{/block:NextPage}
 {/block:Pagination}
 {/block:IfShowPaginationButtons}
 <div id="header">
@@ -737,7 +743,7 @@ ol.notes li.note{
             <div class="quote">
             {Quote}
             {block:Source}
-            <h3><div class="source">� {Source}</div></h3>
+            <h3><div class="source">— {Source}</div></h3>
             {/block:Source}
             {/block:Quote}
 
